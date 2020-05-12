@@ -1,0 +1,9 @@
+.container{
+    margin-top: 5%;
+}
+
+.subContainer{
+    width: 18%;
+    height: 200px;
+    border: 1px solid black;
+}

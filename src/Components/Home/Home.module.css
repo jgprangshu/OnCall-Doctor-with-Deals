@@ -1,0 +1,62 @@
+.Applogo {
+  /* height: 40vmin; */
+  height: 55px;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Applogo {
+    animation: App-logo-spin infinite 3s alternate-reverse;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-45deg);
+  }
+}
+ .panel{
+  background-color:#43d8c9;
+  width: 100%;
+  height: 90px;
+  padding-top: 20px ; 
+  display: flex;
+  margin-top: 5%;
+  z-index: 2;
+  }
+  
+  .panel #avatar h3{
+    color: white;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+    font-family: 'Cuprum', sans-serif;
+    padding: 30%;
+  }
+  
+  #avatar {
+    width: 65px;
+    height: 65px;
+    background:#E80A89;
+    background-size: cover;
+    background-position: top center;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 2%;
+  }
+  
+  .panel .intro{
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+    color: black;
+    font-family: 'Electrolize', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  

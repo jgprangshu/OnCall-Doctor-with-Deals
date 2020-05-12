@@ -1,0 +1,63 @@
+.Applogo {
+    /* height: 40vmin; */
+    height: 45px;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .Applogo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .navBar{
+    background-color: black;
+    padding: 5px;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  /* .navBar ul:after {
+    content: "";
+    display: block;
+    clear: both;
+  }  */
+
+  .navBar li{
+    list-style-type: none;
+    margin: 0 10px;
+    color: #fff;
+    float: left;
+    font-size:1.1rem;
+    padding: 0.8rem 50px;
+    cursor: pointer;
+  }
+
+  .navBar .Applogo{
+    float: left
+  }
+
+  .navBar a{
+    color: white; 
+   text-decoration: none;
+  }
+
+
+  
+  
+
+  
+
+  
