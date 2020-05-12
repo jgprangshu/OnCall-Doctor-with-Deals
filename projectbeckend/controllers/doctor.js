@@ -30,3 +30,12 @@ exports.getDoctor = (req,res) =>{
     })
 }
 
+exports.countDoctors = (req,res) =>{
+    Doctor.estimatedDocumentCount()
+    .then(count =>{
+        res.status(200).json({totalDoctors : count})
+    })
+    .catch(err => res.status(400)
+    .json({err:'Error Fetching doctor count'}))
+}
+

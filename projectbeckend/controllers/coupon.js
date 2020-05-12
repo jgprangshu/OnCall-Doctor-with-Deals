@@ -42,3 +42,12 @@ exports.fetchByCouponId = (req,res) =>{
     })
 }
 
+exports.countCoupons = (req,res) =>{
+    Coupon.estimatedDocumentCount()
+    .then(count =>{
+        res.status(200).json({totalCoupons : count})
+    })
+    .catch(err => res.status(400)
+    .json({err:'Error Fetching coupon count'}))
+}
+

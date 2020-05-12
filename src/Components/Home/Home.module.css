@@ -1,62 +1,78 @@
-.Applogo {
-  /* height: 40vmin; */
-  height: 55px;
-  pointer-events: none;
+.wave{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	z-index: -1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .Applogo {
-    animation: App-logo-spin infinite 3s alternate-reverse;
-  }
+.img img{
+	width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-45deg);
-  }
+.img{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
- .panel{
-  background-color:#43d8c9;
-  width: 100%;
-  height: 90px;
-  padding-top: 20px ; 
-  display: flex;
-  margin-top: 5%;
-  z-index: 2;
-  }
-  
-  .panel #avatar h3{
-    color: white;
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: bold;
-    font-family: 'Cuprum', sans-serif;
-    padding: 30%;
-  }
-  
-  #avatar {
-    width: 65px;
-    height: 65px;
-    background:#E80A89;
-    background-size: cover;
-    background-position: top center;
-    border-radius: 50%;
-    text-align: center;
-    margin-left: 2%;
-  }
-  
-  .panel .intro{
-    display: flex;
-    flex-direction: column;
-    padding:10px;
-    color: black;
-    font-family: 'Electrolize', sans-serif;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 25px;
-  }
 
-  
+.container{
+    /* width: 100vw; */
+    /* height: 100vh; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap :7rem;
+    padding: 2rem;
+}
+
+.container h2{
+  font-size: 5vw;
+  font-weight: 300;
+  font-family: 'Berkshire Swash', cursive;
+  margin: 0 auto; 
+  letter-spacing: .06em; 
+}
+
+.container #name{
+  font-size: 5vw;
+  font-weight: 300;
+  font-family: 'Berkshire Swash', cursive;
+  overflow: hidden; 
+  /* border-right: .15em solid #2ed096;  */
+  margin: 0 auto; 
+  letter-spacing: .06em; 
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #2ed096; }
+}
+
+#redirectButton{
+  margin-top:10%;
+  background :#2ed096;
+  height:20%;
+  width:60%;
+  border-radius:12px;
+}
+
+#redirectButton:hover{
+  cursor: pointer;
+}
+
+#redirectButton p{
+  font-size:21px;
+  font-family: Cuprum;
+  color:white; 
+  position:relative;
+  top:30%;
+  text-align:center
+}

@@ -1,5 +1,5 @@
 const initialState = {
-    noOfIceCreams : 10 
+    noOfUsers : 10 
 }
 
 const homeReducer = (state = initialState,action) =>{

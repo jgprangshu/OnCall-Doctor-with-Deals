@@ -4,7 +4,7 @@ import homeReducer from './reducers/homeReducer'
 import authReducer from './reducers/authReducer'
 import couponReducer from './reducers/couponReducer'
 import doctorReducer from './reducers/doctorReducer'
-
+import adminReducer from './reducers/adminReducer'
 
 const saveToLocalStorage =(state)=>{
     try{
@@ -29,7 +29,7 @@ const loadFromLocalStorage = ()=>{
     }
 }
 
-const rootReducer = combineReducers({homeReducer,authReducer,couponReducer,doctorReducer})
+const rootReducer = combineReducers({homeReducer,authReducer,couponReducer,doctorReducer,adminReducer})
 
 const persistedState = loadFromLocalStorage()
 

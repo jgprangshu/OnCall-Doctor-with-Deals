@@ -9,13 +9,13 @@ import SignIn from './Components/Auth/SignIn';
 import Coupons from './Components/Coupons/Coupons';
 import axios from 'axios';
 import Doctors from './Components/Doctor/Doctor';
+import Admin from './Components/Admin/Admin';
 
 
 function App() {
   axios.defaults.baseURL = 'http://localhost:3002/api'
   return (
     <Provider store={store}>
-      {/* <PersistGate loading={null} persistor={persistor}> */}
        <BrowserRouter> 
        <div className="App">
       <Switch>
@@ -25,10 +25,10 @@ function App() {
         <Route exact path='/signup' component={SignUp}/>
         <Route exact path='/coupons' component={Coupons}/>
         <Route exact path='/book-doctor' component={Doctors}/>
+        <Route exact path='/admin-dashboard' component={Admin}/>
       </Switch>
       </div>
       </BrowserRouter>
-    {/* </PersistGate> */}
     </Provider>
     
   );

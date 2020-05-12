@@ -1,0 +1,32 @@
+.wave{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	z-index: -1;
+}
+
+.container{
+	margin:0 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap :7rem;
+    padding: 2rem;
+}
+
+.container div{
+	box-shadow: 5px 10px #2ed096;
+	border: 0.4px solid lightgrey;
+	border-radius: 10px;
+	width: 250px;
+	height: 120px;
+	font-family: Cuprum;
+	width: 100%;
+	text-align: center;
+}
+
+.container div p{
+	padding-top: 10%;
+	font-size:20px
+}
+

@@ -23,6 +23,10 @@ var userSchema = new Schema({
         trim:true
     },
     salt: String,
+    role:{
+        type: Number,
+        default: 0
+    },
     encry_password:{
         type: String,
         required: true   

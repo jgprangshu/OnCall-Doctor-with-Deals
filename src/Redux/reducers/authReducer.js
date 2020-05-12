@@ -2,6 +2,7 @@ const initialState = {
     firstName:'',
     lastName:'',
     email:'',
+    role: 0,
     isSignedIn: false
 }
 
@@ -14,6 +15,7 @@ const authReducer = (state=initialState, action) =>{
                 firstName: action.payload.firstName,
                 lastName: action.payload.lastName,
                 email: action.payload.email,
+                role:action.payload.role,
                 isSignedIn: true,
                 
             }

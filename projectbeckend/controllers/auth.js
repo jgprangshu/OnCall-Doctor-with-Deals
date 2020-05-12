@@ -30,13 +30,12 @@ exports.signin = (req,res) =>{
                 err: "User email password doesnot match"
           })
         }
-
         const token = jwt.sign({_id : user._id},process.env.SECRET);
         res.cookie("token",token,{expire : new Date() + 999})
 
-        const {email,_id,firstName,lastName} = user
+        const {email,_id,firstName,lastName,role} = user
         return res.status(200).json({
-            token,email, id :_id,firstName,lastName
+            token,email, id :_id,firstName,lastName,role
         })
     })
 }
@@ -46,4 +45,13 @@ exports.signout = (req,res) =>{
     res.json({
         msg : "Logout Success"
     })
+}
+
+exports.countUsers = (req,res) =>{
+    User.estimatedDocumentCount()
+    .then(count =>{
+        res.status(200).json({totalUsers : count})
+    })
+    .catch(err => res.status(400)
+    .json({err:'Error Fetching user count'}))
 }
