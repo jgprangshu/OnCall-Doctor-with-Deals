@@ -25,6 +25,7 @@ class DoctorList extends Component {
 
     
     render() {
+        console.log(this.props.doctors)
         return (
             <div className={styles.container}>
                  {this.state.finalSubmit && <CustomizedSnackbar finalSubmit={(value)=> this.setState({finalSubmit:value})} selectedDoctor={this.state.selectedDoctor}/>}
@@ -34,7 +35,8 @@ class DoctorList extends Component {
                             <div className={styles.items} key={item._id}>
                                 <div className={styles.avatar}>
                                     {item.image ?
-                                    <img src={`data:image/png;base64,${Buffer.from(item.image.data).toString('base64')}`} alt="mh" className={styles.avatar}/> 
+                                    // <img src={`data:image/png;base64,${Buffer.from(item.image.data).toString('base64')}`} alt="mh" className={styles.avatar}/> 
+                                    <img src={'http://localhost:3002/' + item.image} alt="mh"className={styles.avatar}/>
                                     :<h3>No image</h3>}
                                 </div>
                                 <div className={styles.description}>

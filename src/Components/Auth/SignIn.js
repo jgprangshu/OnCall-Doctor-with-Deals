@@ -62,10 +62,12 @@ const SignIn = (props) =>{
   
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    // alert(`Submitting Name ${email} ${password}`)
     props.loggedIn(email,password)
     props.history.push('/home')
+    // {props.errorMsg === '' && props.history.push('/home') }
 }
+
+
 
     return (
       <Container component="main" maxWidth="xs">
@@ -139,10 +141,16 @@ const SignIn = (props) =>{
     );
 }
 
+const mapStateToProps = (state) =>{
+  return{
+      errorMsg : state.authReducer.errorMsg
+  }
+};
+
 const mapDispatchToProps = (dispatch) =>{
     return{
         loggedIn : (email,password) => dispatch(LoggedIn(email,password))
     }
 };
 
-export default connect(null,mapDispatchToProps)(SignIn);
+export default connect(mapStateToProps,mapDispatchToProps)(SignIn);

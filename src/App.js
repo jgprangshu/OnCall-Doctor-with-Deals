@@ -10,6 +10,7 @@ import Coupons from './Components/Coupons/Coupons';
 import axios from 'axios';
 import Doctors from './Components/Doctor/Doctor';
 import Admin from './Components/Admin/Admin';
+import AboutUs from './Components/AboutUs/AboutUs';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route exact path='/signin' component={SignIn}/>
         <Route exact path='/signup' component={SignUp}/>
         <Route exact path='/coupons' component={Coupons}/>
+        <Route exact path='/about-us' component={AboutUs}/>
         <Route exact path='/book-doctor' component={Doctors}/>
         <Route exact path='/admin-dashboard' component={Admin}/>
       </Switch>

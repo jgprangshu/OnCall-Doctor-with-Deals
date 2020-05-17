@@ -30,3 +30,25 @@
 	font-size:20px
 }
 
+.containerUpload{
+	margin:2% 35%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap :2rem;
+	padding: 2rem;
+}
+
+.containerUpload div{
+	border: 1.6px dashed #057d53;
+	width: 300px;
+	height: 150px;
+	font-family: Cuprum;
+	text-align: center;
+}
+
+.upload{
+	height: 70%;
+	width: 100%;
+	margin-top: 5%;
+}
+

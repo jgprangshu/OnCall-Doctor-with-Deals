@@ -16,7 +16,7 @@ function Home (props){
         <React.Fragment>
             <NavBar/>
 
-            <div style={{marginTop: '10vh'}}>
+            <div className={styles.mainContainer}>
                 <img className={styles.wave} src={wave} alt="wave"></img>
                 <div className={styles.container}>
                     <div className={styles.img}>
@@ -26,7 +26,7 @@ function Home (props){
                         <h2>Welcome, </h2>
                         <h2 id={styles.name}>{firstName}!!</h2>
                         <div id={styles.redirectButton} onClick={handleClick}>
-                            <p> Grab Coupons and Consult Doctors...</p>
+                            <p style={{fontSize:"100%"}}> Grab Coupons and Consult Doctors...</p>
                         </div>
                     </div>
                     

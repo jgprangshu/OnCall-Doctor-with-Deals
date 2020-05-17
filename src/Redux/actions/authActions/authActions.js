@@ -7,6 +7,14 @@ export const LoginSuccess = (resp) =>{
     }
 }
 
+export const LoginFailed = (error) =>{
+    console.log(error)
+    return{
+        type: 'LOGIN_FAILED',
+        payload: error.response.data
+    }
+}
+
 export const LogOutSuccess = (resp) =>{
     return{
         type: 'LOG_OUT_SUCCESS'
@@ -21,9 +29,9 @@ export const LoggedIn = (email,password) =>{
             "email" : email,
             "password": password
         }).then(resp=>{
-            // localStorage.setItem("token",resp.data.token);
             dispatch(LoginSuccess(resp))
         })
+        .catch(err => dispatch(LoginFailed(err)))
     }
     
 }

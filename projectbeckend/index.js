@@ -24,6 +24,7 @@ mongoose.connect(process.env.DATABASE,{
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors());
+app.use('/uploads',express.static('uploads'))
 
 //ROUTES
 app.use('/api',authRoutes)

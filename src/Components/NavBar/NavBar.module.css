@@ -27,13 +27,14 @@
     left: 0;
     width: 100%;
     margin: 0;
+    /* margin-bottom: 100px; */
   }
 
-  /* .navBar ul:after {
+  .navBar:after {
     content: "";
     display: block;
     clear: both;
-  }  */
+  } 
 
   .navBar li{
     list-style-type: none;

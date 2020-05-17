@@ -4,8 +4,9 @@ const path = require("path");
 
 
 exports.postCoupon = (req,res) =>{
+    console.log(req.file)
     var newCoupon = new Coupon(req.body)
-    newCoupon.image.data = fs.readFileSync('C:/Users/prgogoi/Desktop/dealsProject/curefit.png')
+    // newCoupon.image.data = fs.readFileSync('C:/Users/prgogoi/Desktop/dealsProject/curefit.png')
     // newCoupon.img.contentType = 'image/png'
     newCoupon.save((err,coupon)=>{
         if(err){

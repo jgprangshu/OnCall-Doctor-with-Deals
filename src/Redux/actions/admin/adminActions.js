@@ -28,21 +28,6 @@ const couponCountSuccess= (couponCount) =>{
 
 export const fetchCountAction = () =>{
     return (dispatch) =>{
-        // try{
-        //     const userCount = axios.get('/count/users')
-        //     .then(res => res.data.totalUsers)
-
-        //     const doctorCount = axios.get('/count/doctors')
-        //     .then(res => res.data)
-
-        //     const couponCount = axios.get('/count/coupons')
-        //     .then(res => res.data)
-
-        //     dispatch(countFetchSuccess(userCount,doctorCount,couponCount))
-        // }
-        // catch(err){
-        //     console.log(err)
-        // }
         axios.get('/count/users')
         .then(users => dispatch(userCountSuccess(users.data)))
         .then(() => axios.get('/count/doctors'))
@@ -54,5 +39,14 @@ export const fetchCountAction = () =>{
         });
         
         
+    }
+}
+
+export const uploadDoctorAction =(formData) =>{
+    return (dispatch) =>{
+        console.log('FORM DATA',formData)
+        axios.post('/doctor/entry',formData)
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
     }
 }

@@ -3,6 +3,7 @@ const initialState = {
     lastName:'',
     email:'',
     role: 0,
+    errorMsg:'',
     isSignedIn: false
 }
 
@@ -26,6 +27,12 @@ const authReducer = (state=initialState, action) =>{
                 firstName: '',
                 lastName: '',
                 isSignedIn: false
+            }
+        case 'LOGIN_FAILED':
+            console.log(action.payload.err)
+            return{
+                ...state,
+                errorMsg : action.payload.err
             }
             default: return state;
     }

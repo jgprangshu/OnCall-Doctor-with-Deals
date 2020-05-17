@@ -1,12 +1,21 @@
 var Doctor = require('../models/doctor')
 var fs = require('fs');
 const path = require("path");
+const multer = require('multer')
+const upload = multer({dest:'uploads'})
 
 
 exports.postDoctor = (req,res) =>{
-    var newDoctor = new Doctor(req.body)
-    newDoctor.image.data = fs.readFileSync('C:/Users/prgogoi/Desktop/dealsProject/doctor6.png')
-    newDoctor.save((err,doctor)=>{
+    const file = req.file
+    if (!file) {
+        const error = new Error('Please upload a file')
+        error.httpStatusCode = 400
+        return next(error)
+    }
+     var newDoctor = new Doctor(req.body)
+    // // newDoctor.image.data = fs.readFileSync('C:/Users/prgogoi/Desktop/dealsProject/doctor6.png')
+     newDoctor.image = file.path.replace(/\\/g, "/")
+     newDoctor.save((err,doctor)=>{
         if(err){
             console.log(err)
             return res.status(400).json({

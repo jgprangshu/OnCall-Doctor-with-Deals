@@ -8,8 +8,9 @@ const doctorSchema = new Schema({
         maxlength: 64
     },
     image:{
-        data: Buffer,
-        contentType: String
+        type: String
+        // data: Buffer,
+        // contentType: String
     },
     qualification:{
         type: String,
