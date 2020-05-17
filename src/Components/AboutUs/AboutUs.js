@@ -50,7 +50,7 @@ const buttonText = {
 export default function AboutUs() {
 
     const githubClicked = () =>{
-        window.location.replace('http://www.github.com/jgprangshu')
+        window.location.replace('http://www.github.com/jgprangshu/OnCall-Doctor-with-Deals')
     }
 
     return (
